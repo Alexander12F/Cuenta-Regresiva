@@ -1,0 +1,183 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Fondo con efecto animado */
+body::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(#00eaff, #00ffcc, #ff00ff, #00eaff);
+  animation: spin 12s linear infinite;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 30, 48, 0.9);
+  z-index: -1;
+}
+
+/* Contenedor */
+.container {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.4);
+  max-width: 550px;
+  width: 90%;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #00eaff;
+  text-shadow: 0 0 20px #00eaff;
+}
+
+/* Countdown */
+#countdown {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.time {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  transition: transform 0.3s;
+}
+
+.time:hover {
+  transform: scale(1.1);
+}
+
+.time span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+  color: #00ffcc;
+  text-shadow: 0 0 12px #00ffcc;
+  animation: glow 1.5s infinite alternate;
+}
+
+.time p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #ddd;
+  letter-spacing: 1px;
+}
+
+/* Animaciones */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00ffcc; }
+  to { text-shadow: 0 0 25px #00ffcc, 0 0 40px #00eaff; }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at 20% 20%, #180030, #000010 90%);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #e0c8ff;
+  text-shadow: 0 0 20px #b47bff, 0 0 40px #7a4dff;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.time {
+  background: rgba(255,255,255,0.05);
+  padding: 20px 15px;
+  border-radius: 15px;
+  min-width: 80px;
+  border: 1px solid rgba(160, 120, 255, 0.5);
+  box-shadow: 0 0 20px rgba(180, 100, 255, 0.7);
+}
+
+.time span {
+  font-size: 2em;
+  display: block;
+}
+
+.time p {
+  font-size: 0.8em;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+/* 🎵 BOTÓN FLOTANTE */
+#musicBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #7a4dff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(122, 77, 255, 0.7);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#musicBtn:hover {
+  transform: scale(1.1);
+  background: #9d7dff;
+}
